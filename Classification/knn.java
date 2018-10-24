@@ -282,7 +282,7 @@ public class knn {
 			SortedMap<Integer, Float> sortedDistances = (SortedMap<Integer, Float>) sortByValue(distances);
 			TreeMap<Integer, Float> top_k_= (TreeMap<Integer, Float>) putFirstEntries(kn,sortedDistances);
 
-			//Top k me sabse zyada bar jo class aa rha hai
+			// Highest occuring class in Top k
 			//HashMap<Integer,Float> class_count = new HashMap<Integer,Float>();
 
 			//HashMap to store weighted distances. Every index of this HashMap corresponds to a class label
@@ -323,6 +323,7 @@ public class knn {
 			int maxIndex = maxEntry.getKey();*/
 			//System.out.println("maxIndex: " + maxIndex);
 			//System.out.println("class of maxIndex: " + id_topic_of_train_data.get(maxIndex));
+			
 			//The class to be assigned will be the index of the maximum distance
 			assigned_classes.put(k, maxKey);
 			//System.out.println("Assigned classes "+ assigned_classes);
